@@ -22,12 +22,11 @@ console.log(getItem(stack, 2)) // -> 5
 function setItem(cards, position, replacementCard) {
   cards[position] = replacementCard;
   return cards
-}
-
+};
 console.log(setItem(stack, 2, 6))
 
 // Make a card appear by inserting a new card at the top of the stack. Return the adjusted stack.
-const newCard = 8;
+// const newCard = 8;
 function insertItemAtTop(cards, newCard) {
     cards.push(newCard);
     return cards
@@ -51,7 +50,7 @@ function removeItemFromTop(cards) {
 console.log(removeItemFromTop(stack));
 
 // Make a card appear by inserting a new card at the bottom of the stack. Return the adjusted stack.
-const newCard = 8;
+// const newCard = 8;
 // insertItemAtBottom([5, 9, 7, 1], newCard);
 function insertItemAtBottom(cards, newCard) {
     cards.unshift(newCard)
@@ -71,10 +70,6 @@ console.log(removeItemAtBottom(stack));
 const stackSize = 4;
 // checkSizeOfStack([3, 2, 6, 4, 8], stackSize);
 function checkSizeOfStack(cards, stackSize) {
-    if (cards.length == stackSize) {
-        return true
-    } else {
-        return false
-    }
+    return cards.length == stackSize;
 };
 console.log(checkSizeOfStack(stack, stackSize));
